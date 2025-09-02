@@ -8,7 +8,7 @@ const projects = [
       "A modern, responsive portfolio website with interactive animations and dark mode functionality.",
     technologies: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
     image:
-      "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+      "https://res.cloudinary.com/dgechlqls/image/upload/v1756844789/gjcdzhcjwqe0f017igsy.png",
     liveLink: "#",
     githubLink: "#",
     category: "Portfolio",
@@ -19,7 +19,7 @@ const projects = [
       "A financial management application that helps users track their expenses with visualization charts and budgeting tools.",
     technologies: ["React", "Chart.js", "Node.js", "MongoDB"],
     image:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+      "https://res.cloudinary.com/dgechlqls/image/upload/v1756844922/fvus2yfkuxgcxfevebk3.png",
     liveLink: "https://expense-tracker-pi-rust-77.vercel.app/home",
     githubLink: "https://github.com/kallulgogoi/Expense-tracker.git",
     category: "Finance",
@@ -30,7 +30,7 @@ const projects = [
       "An intelligent chatbot implementation with natural language processing capabilities and contextual responses.",
     technologies: ["Gemmini Api", "React.JS", "TailWind CSS", "APIs"],
     image:
-      "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+      "https://res.cloudinary.com/dgechlqls/image/upload/v1756844844/terpkq07wngoaf17aczg.png",
     liveLink: "https://chatbot-eight-ashy-68.vercel.app/",
     githubLink: "https://github.com/kallulgogoi/Chatbot.git",
     category: "AI",
@@ -41,7 +41,7 @@ const projects = [
       "A cloud-based application that converts images to shareable links using Cloudinary API with drag and drop functionality.",
     technologies: ["JavaScript", "Cloudinary API", "HTML5", "CSS3"],
     image:
-      "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+      "https://res.cloudinary.com/dgechlqls/image/upload/v1756845095/pz57f5nbtdlzpqqlfhnq.png",
     liveLink: "https://linkfyurl.netlify.app/",
     githubLink: "https://github.com/kallulgogoi/Photo_to_URL.git",
     category: "Cloud",

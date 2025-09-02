@@ -8,14 +8,20 @@ import {
   Instagram,
   Send,
 } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
+    subject: "",
     email: "",
     message: "",
   });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // null, 'success', or 'error'
+  const formRef = useRef();
 
   const handleChange = (e) => {
     setFormData({
@@ -26,10 +32,36 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
-    // Reset form
-    setFormData({ name: "", email: "", message: "" });
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+    const serviceID = service_obu5ff8;
+    const templateID = template_ar5avw4;
+    const publicKey = umfekVt5MmM2iOj32;
+
+    emailjs
+      .sendForm(serviceID, templateID, formRef.current, publicKey)
+      .then((result) => {
+        console.log("Email successfully sent!", result.text);
+        setSubmitStatus("success");
+        setFormData({ name: "", subject: "", email: "", message: "" });
+
+        // Auto-hide success message after 5 seconds
+        setTimeout(() => {
+          setSubmitStatus(null);
+        }, 5000);
+      })
+      .catch((error) => {
+        console.error("Failed to send email:", error);
+        setSubmitStatus("error");
+
+        // Auto-hide error message after 5 seconds
+        setTimeout(() => {
+          setSubmitStatus(null);
+        }, 5000);
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   };
 
   return (
@@ -202,12 +234,34 @@ export default function Contact() {
         >
           <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl blur opacity-20"></div>
           <form
+            ref={formRef}
             onSubmit={handleSubmit}
             className="relative bg-black/80 border border-cyan-500/30 rounded-2xl p-8 shadow-lg space-y-6 backdrop-blur-sm"
           >
             <h3 className="text-2xl font-bold text-cyan-300 mb-6">
               Send a Message
             </h3>
+
+            {/* Status Messages */}
+            {submitStatus === "success" && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="p-3 bg-green-900/30 border border-green-500/50 rounded-lg text-green-400"
+              >
+                Message sent successfully! I'll get back to you soon.
+              </motion.div>
+            )}
+
+            {submitStatus === "error" && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="p-3 bg-red-900/30 border border-red-500/50 rounded-lg text-red-400"
+              >
+                Failed to send message. Please try again or email me directly.
+              </motion.div>
+            )}
 
             <div className="space-y-4">
               <div className="relative">
@@ -235,7 +289,18 @@ export default function Contact() {
                   required
                 />
               </div>
-
+              <div className="relative">
+                <motion.input
+                  whileFocus={{ scale: 1.02 }}
+                  type="text"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  placeholder="Subject"
+                  className="w-full p-4 rounded-xl bg-black/50 border border-cyan-500/20 focus:border-cyan-500 focus:outline-none text-gray-200 placeholder-gray-500"
+                  required
+                />
+              </div>
               <div className="relative">
                 <motion.textarea
                   whileFocus={{ scale: 1.02 }}
@@ -251,15 +316,28 @@ export default function Contact() {
             </div>
 
             <motion.button
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0px 0px 25px rgba(6, 182, 212, 0.5)",
-              }}
+              whileHover={
+                !isSubmitting
+                  ? {
+                      scale: 1.05,
+                      boxShadow: "0px 0px 25px rgba(6, 182, 212, 0.5)",
+                    }
+                  : {}
+              }
               whileTap={{ scale: 0.95 }}
               type="submit"
-              className="w-full py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold rounded-xl flex items-center justify-center gap-2"
+              disabled={isSubmitting}
+              className={`w-full py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold rounded-xl flex items-center justify-center gap-2 ${
+                isSubmitting ? "opacity-70 cursor-not-allowed" : ""
+              }`}
             >
-              Send Message <Send className="w-5 h-5" />
+              {isSubmitting ? (
+                <>Sending...</>
+              ) : (
+                <>
+                  Send Message <Send className="w-5 h-5" />
+                </>
+              )}
             </motion.button>
           </form>
         </motion.div>

@@ -7,21 +7,21 @@ const experiences = [
     org: "Coding Club, NIT Silchar",
     duration: "2024 - Present",
     desc: "Contributing as a junior moderator, managing events, coding sessions, and helping peers enhance their coding skills.",
-    icon: "👨‍💻",
+    icon: "https://media.licdn.com/dms/image/v2/C4D1BAQGWqNptbeUGig/company-background_1536_768/company-background_1536_768/0/1583013798937?e=2147483647&v=beta&t=9gCV30ULHSpjn7Rq28AXsCujJsuci_ijxDnRzh1UABk",
   },
   {
     role: "Junior UI/UX Developer",
     org: "Google Developer Groups Club, NIT Silchar",
     duration: "2024 - Present",
     desc: "Designing and prototyping modern UI/UX solutions, collaborating with developers to build impactful projects.",
-    icon: "🎨",
+    icon: "https://avatars.githubusercontent.com/u/87744060?s=280&v=4",
   },
   {
     role: "Web Wing Member",
     org: "Computer Science Society, NIT Silchar",
     duration: "2024 - Present",
     desc: "Developing web-based solutions and contributing to society-led projects, enhancing technical exposure and collaboration.",
-    icon: "🌐",
+    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmxVNS3qy_vHZIfS5o-9sCuiwl1aOSPSK0kg&s",
   },
 ];
 
@@ -315,7 +315,15 @@ export default function Experience() {
             <div className="absolute inset-0 rounded-2xl bg-cyan-500/10 blur-md -z-10"></div>
 
             <div className="flex items-start gap-4">
-              <span className="text-3xl">{exp.icon}</span>
+              <span className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 border-2 border-cyan-500/30">
+                <img
+                  src={exp.icon}
+                  alt={exp.org}
+                  className="w-full h-full object-cover"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                />
+              </span>
               <div>
                 <h3 className="text-xl font-bold text-cyan-300">{exp.role}</h3>
                 <p className="font-semibold text-gray-400">{exp.org}</p>

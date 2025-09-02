@@ -22,7 +22,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="min-h-screen bg-black text-gray-300 flex items-center justify-center px-8 md:px-20 py-16 relative overflow-hidden"
+      className="min-h-screen bg-black text-gray-300 flex items-center justify-center px-8 md:px-20 py-16 pt-24 md:pt-16 relative overflow-hidden"
     >
       {/* Animated Star Background */}
       <div className="absolute inset-0 overflow-hidden">
