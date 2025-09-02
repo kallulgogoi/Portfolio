@@ -168,7 +168,7 @@ export default function About() {
             transition={{ delay: 0.6, duration: 0.8 }}
           >
             <motion.a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/kallul-gogoi-00a5152a0/"
               target="_blank"
               whileHover={{ scale: 1.2, y: -5 }}
               whileTap={{ scale: 0.9 }}
@@ -177,7 +177,7 @@ export default function About() {
               <FaLinkedin size={28} />
             </motion.a>
             <motion.a
-              href="https://instagram.com"
+              href="https://www.instagram.com/kallul_gogoi33/"
               target="_blank"
               whileHover={{ scale: 1.2, y: -5 }}
               whileTap={{ scale: 0.9 }}
@@ -186,7 +186,7 @@ export default function About() {
               <FaInstagram size={28} />
             </motion.a>
             <motion.a
-              href="https://facebook.com"
+              href="https://www.facebook.com/profile.php?id=100067160496166"
               target="_blank"
               whileHover={{ scale: 1.2, y: -5 }}
               whileTap={{ scale: 0.9 }}
@@ -195,7 +195,7 @@ export default function About() {
               <FaFacebook size={28} />
             </motion.a>
             <motion.a
-              href="https://github.com"
+              href="https://github.com/kallulgogoi"
               target="_blank"
               whileHover={{ scale: 1.2, y: -5 }}
               whileTap={{ scale: 0.9 }}

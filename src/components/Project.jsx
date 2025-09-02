@@ -11,18 +11,6 @@ const projects = [
       "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
     liveLink: "#",
     githubLink: "#",
-    codeSnippet: `const Portfolio = () => {
-  const [darkMode, setDarkMode] = useState(false);
-  
-  return (
-    <div className={\`\${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'}\`}>
-      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-      <HeroSection />
-      <Projects />
-      <Contact />
-    </div>
-  );
-}`,
     category: "Portfolio",
   },
   {
@@ -40,22 +28,11 @@ const projects = [
     title: "AI Chatbot",
     description:
       "An intelligent chatbot implementation with natural language processing capabilities and contextual responses.",
-    technologies: ["Python", "TensorFlow", "NLTK", "Flask"],
+    technologies: ["Gemmini Api", "React.JS", "TailWind CSS", "APIs"],
     image:
       "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
     liveLink: "https://chatbot-eight-ashy-68.vercel.app/",
     githubLink: "https://github.com/kallulgogoi/Chatbot.git",
-    codeSnippet: `def generate_response(user_input):
-    # Preprocess the input
-    tokens = preprocess_text(user_input)
-    
-    # Get intent classification
-    intent = classify_intent(tokens)
-    
-    # Generate appropriate response
-    response = response_generator(intent, tokens)
-    
-    return response`,
     category: "AI",
   },
   {
@@ -67,19 +44,6 @@ const projects = [
       "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
     liveLink: "https://linkfyurl.netlify.app/",
     githubLink: "https://github.com/kallulgogoi/Photo_to_URL.git",
-    codeSnippet: `const uploadImage = async (file) => {
-  const formData = new FormData();
-  formData.append('file', file);
-  formData.append('upload_preset', CLOUDINARY_UPLOAD_PRESET);
-  
-  const response = await fetch(CLOUDINARY_URL, {
-    method: 'POST',
-    body: formData
-  });
-  
-  const data = await response.json();
-  return data.secure_url;
-}`,
     category: "Cloud",
   },
 ];

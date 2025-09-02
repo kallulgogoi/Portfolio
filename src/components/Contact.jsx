@@ -5,7 +5,7 @@ import {
   MapPin,
   Github,
   Linkedin,
-  Twitter,
+  Instagram,
   Send,
 } from "lucide-react";
 import { useState } from "react";
@@ -69,7 +69,7 @@ export default function Contact() {
         ))}
 
         {/* Grid pattern */}
-        <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 opacity-50">
           <div className="absolute inset-0 bg-grid-small-cyan-500/30"></div>
         </div>
 
@@ -135,20 +135,7 @@ export default function Contact() {
               </div>
               <div>
                 <p className="text-gray-400 text-sm">Email</p>
-                <p className="text-cyan-300">kallul@example.com</p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              whileHover={{ x: 5 }}
-              className="flex items-center gap-4 p-4 rounded-xl bg-black/50 border border-cyan-500/20 hover:border-cyan-500/50 transition-all"
-            >
-              <div className="p-3 bg-cyan-500/10 rounded-full">
-                <Phone className="w-6 h-6 text-cyan-400" />
-              </div>
-              <div>
-                <p className="text-gray-400 text-sm">Phone</p>
-                <p className="text-cyan-300">+91 98765 43210</p>
+                <p className="text-cyan-300">kallulgogoinits@gmail.com</p>
               </div>
             </motion.div>
 
@@ -161,7 +148,7 @@ export default function Contact() {
               </div>
               <div>
                 <p className="text-gray-400 text-sm">Location</p>
-                <p className="text-cyan-300">Tinsukia, Assam, India</p>
+                <p className="text-cyan-300">Sadiya,Tinsukia, Assam, India</p>
               </div>
             </motion.div>
           </div>
@@ -175,17 +162,17 @@ export default function Contact() {
               {[
                 {
                   icon: Github,
-                  href: "https://github.com/yourusername",
+                  href: "https://github.com/kallulgogoi",
                   color: "hover:text-gray-300",
                 },
                 {
                   icon: Linkedin,
-                  href: "https://linkedin.com/in/yourusername",
+                  href: "https://www.linkedin.com/in/kallul-gogoi-00a5152a0/",
                   color: "hover:text-blue-400",
                 },
                 {
-                  icon: Twitter,
-                  href: "https://twitter.com/yourusername",
+                  icon: Instagram,
+                  href: "https://www.instagram.com/kallul_gogoi33/",
                   color: "hover:text-cyan-400",
                 },
               ].map((social, index) => (

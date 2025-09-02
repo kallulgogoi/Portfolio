@@ -413,12 +413,6 @@ export default function Skills() {
             {cfData ? (
               <div className="space-y-2">
                 <p>
-                  Username:{" "}
-                  <span className="text-cyan-400 font-mono">
-                    {cfData.handle}
-                  </span>
-                </p>
-                <p>
                   Rating:{" "}
                   <span className="text-cyan-400 font-mono">
                     {cfData.rating}
@@ -432,8 +426,12 @@ export default function Skills() {
                 </p>
                 <p>
                   Rank:{" "}
+                  <span className="text-cyan-400 font-mono">{cfData.rank}</span>
+                </p>
+                <p>
+                  Max Rank:{" "}
                   <span className="text-cyan-400 font-mono">
-                    {cfData.questions}
+                    {cfData.maxRank}
                   </span>
                 </p>
               </div>
