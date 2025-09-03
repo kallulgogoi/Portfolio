@@ -17,7 +17,7 @@ const projects = [
     title: "Expense Tracker",
     description:
       "A financial management application that helps users track their expenses with visualization charts and budgeting tools.",
-    technologies: ["React", "Chart.js", "Node.js", "MongoDB"],
+    technologies: ["React", "Rechart", "Node.js", "MongoDB", "Express.Js"],
     image:
       "https://res.cloudinary.com/dgechlqls/image/upload/v1756844922/fvus2yfkuxgcxfevebk3.png",
     liveLink: "https://expense-tracker-pi-rust-77.vercel.app/home",
@@ -220,6 +220,7 @@ const ProjectCard = ({ project, index }) => {
         <div className="flex gap-3">
           <motion.a
             href={project.liveLink}
+            target="_blank"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="flex-1 text-center py-2 px-4 rounded-lg bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 hover:bg-cyan-500/30 transition-colors"

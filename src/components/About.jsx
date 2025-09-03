@@ -156,8 +156,8 @@ export default function About() {
             <span className="text-cyan-300 font-semibold">CSE student</span> at
             NIT Silchar. I love building{" "}
             <span className="text-cyan-300">tech solutions</span> with modern
-            web technologies, from robotics-inspired UI to full-stack apps.
-            Always curious, always innovating ⚡.
+            web technologies,eye catching UI to full-stack websites. Always
+            curious, always innovating ⚡.
           </motion.p>
 
           {/* Social Media Icons */}
