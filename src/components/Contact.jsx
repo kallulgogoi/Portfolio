@@ -436,6 +436,9 @@ export default function Contact() {
           </form>
         </motion.div>
       </div>
+      <h2 className="text-center mt-10 text-amber-400">
+        @KALLUL GOGOI PORTFOLIO 2025
+      </h2>
     </section>
   );
 }

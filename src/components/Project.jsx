@@ -46,6 +46,19 @@ const projects = [
     githubLink: "https://github.com/kallulgogoi/Photo_to_URL.git",
     category: "Cloud",
   },
+  {
+    title: "Valentine's Day App UI",
+    description:
+      "A valentine's Day theme App UI which i created for GDGC NIT Silchar.It was given to me as a task in prototype planery 5.0(The UI/UX workshop of GDGC NIT Silchar) ",
+    technologies: ["Figma", "Prototyping", "UI/UX"],
+    image:
+      "https://res.cloudinary.com/dgechlqls/image/upload/v1756884706/wponrmj50tzv2vvfzefg.png",
+    liveLink:
+      "https://www.figma.com/proto/7EzIisIb84OApu8h6UoQYf/Valentine_app_GDGC_Project-_Main_File--Copy-?node-id=89-84&p=f&t=mC6SYFKOFO2IfQZF-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2",
+    githubLink:
+      "https://www.figma.com/design/7EzIisIb84OApu8h6UoQYf/Valentine_app_GDGC_Project-_Main_File--Copy-?node-id=0-1&t=mHzJTtMIkePXtqhU-1",
+    category: "Figma",
+  },
 ];
 
 // Binary Rain Background
