@@ -223,7 +223,7 @@ const Experience = () => {
             ❮
           </motion.button>
 
-          {/* Certificate Image - Clickable for modal */}
+          {/* Certificate Image  */}
           <motion.div
             key={current}
             initial={{ opacity: 0, scale: 0.9 }}

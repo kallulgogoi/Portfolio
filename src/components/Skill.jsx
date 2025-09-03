@@ -243,9 +243,8 @@ export default function Skills() {
   const [cfData, setCfData] = useState(null);
   const [lcData, setLcData] = useState(null);
 
-  // 🔹 Replace with your usernames
-  const codeforcesUser = "KALLUL"; // <-- change to your username
-  const leetcodeUser = "KALLUL"; // <-- change to your username
+  const codeforcesUser = "KALLUL";
+  const leetcodeUser = "KALLUL";
 
   // Fetch Codeforces data
   useEffect(() => {
