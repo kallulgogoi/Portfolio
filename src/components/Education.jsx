@@ -16,8 +16,8 @@ const education = [
     stream: "Bachelor of Technology - BTech",
     institute: "NIT Silchar",
     duration: "Aug 2024 - Present",
-    desc: "I am a 2nd year B.Tech student of Computer Science and Engineering branch at NIT Silchar. I have completed my 1st year with a CGPA of 8.18.",
-    score: "CGPA: 8.18",
+    desc: "I am a 2nd year B.Tech student of Computer Science and Engineering branch at NIT Silchar. I have completed my 3rd sem with a SGPA of 8.92.",
+    score: "CGPA: 8.42",
   },
   {
     title: "Secondary School",
